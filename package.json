@@ -6,15 +6,13 @@
   "main": "api/vertex-proxy.ts",
   "scripts": {
     "dev": "tsx api/vertex-proxy.ts",
-    "start": "node api/vertex-proxy.js"
+    "start": "tsx api/vertex-proxy.ts"
   },
   "dependencies": {
     "express": "^4.21.0",
     "google-auth-library": "^9.12.0",
     "node-fetch": "^3.3.2",
-    "dotenv": "^16.4.5"
-  },
-  "devDependencies": {
+    "dotenv": "^16.4.5",
     "tsx": "^4.10.0",
     "typescript": "^5.6.2"
   }
