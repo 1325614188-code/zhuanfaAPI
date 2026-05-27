@@ -82,4 +82,12 @@ async function forwardToVertex(req: Request, res: Response) {
 // 注册路由（兼容任意请求路径与方法，确保万无一失）
 app.all('*', forwardToVertex);
 
+// 在非 Vercel 环境下（例如 Zeabur、Docker、自建 VPS），自动启动端口监听服务
+if (process.env.PORT || process.env.ZEABUR || process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => {
+    console.log(`🚀 Standalone server is running on port ${PORT}`);
+  });
+}
+
 export default app;
