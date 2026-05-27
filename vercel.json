@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/vertex-proxy/(.*)",
+      "destination": "/api/vertex-proxy"
+    },
+    {
+      "source": "/api/vertex-proxy",
+      "destination": "/api/vertex-proxy"
+    }
+  ]
+}
