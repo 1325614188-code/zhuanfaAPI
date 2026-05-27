@@ -79,7 +79,7 @@ async function forwardToVertex(req: Request, res: Response) {
   }
 }
 
-// 注册路由
-app.post('/api/vertex-proxy', forwardToVertex);
+// 注册路由（兼容任意请求路径与方法，确保万无一失）
+app.all('*', forwardToVertex);
 
 export default app;
