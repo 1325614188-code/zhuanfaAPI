@@ -102,7 +102,7 @@ async function forwardToEasyRouter(req: Request, res: Response) {
     const targetPath = originalUrl.replace(/^\/api\/easyrouter-proxy/, '').replace(/^\/easyrouter-proxy/, '');
     
     // 2. 目标地址：EasyRouter 官方 API 端点
-    const targetUrl = `https://api.easyrouter.io${targetPath}`;
+    const targetUrl = `https://easyrouter.io${targetPath}`;
     console.log(`[EasyRouter Proxy] Forwarding request to: ${targetUrl}`);
 
     // 3. 构建请求参数，完全透传前端的 Payload，并透传 Bearer Token
